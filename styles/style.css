@@ -1,321 +1,518 @@
-body {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-}
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        button {
+            border: none;
+            cursor: pointer;
+        }
+        
+        .d-flex {
+            display: flex;
+        }
+        
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        ul {
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+            font-family: 'Lato';
+            font-size: 14px;
+            font-weight: 400;
+            color: #B5B5B5;
+            padding: 6px 13px;
+            border-radius: 6px;
+            margin-bottom: 5px;
+        }
+        
+        .color-blue {
+            color: blue;
+        }
 
-button {
-    border: none;
-    cursor: pointer;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-ul {
-    padding: 0;
-}
-
-li {
-    list-style: none;
-    font-family: 'Lato';
-    font-size: 14px;
-    font-weight: 400;
-    color: #B5B5B5;
-    padding: 6px 13px;
-    border-radius: 6px;
-    margin-bottom: 5px;
-}
-
-li:hover {
-    background: rgba(255, 255, 255, .2);
-    color: white;
-}
-
-
-/*пространство между ивокруг элементов*/
-
-.justify-content-between {
-    justify-content: space-between;
-    /* Равномерно распределяет все элементы по ширине flex-блока.
+        li:hover {
+            background: rgba(255, 255, 255, .2);
+            color: white;
+        }
+        /*пространство между ивокруг элементов*/
+        
+        .justify-content-between {
+            justify-content: space-between;
+            /* Равномерно распределяет все элементы по ширине flex-блока.
     Первый элемент вначале, последний в конце */
-}
-
-.justify-content-around {
-    justify-content: space-around;
-    /* Равномерно распределяет все элементы по ширине flex-блока.
+        }
+        
+        .justify-content-around {
+            justify-content: space-around;
+            /* Равномерно распределяет все элементы по ширине flex-блока.
     Все элементы имеют полноразмерное пространство с обоих концов */
-}
-
-.justify-content-center {
-    justify-content: center;
-    /* Выравнивание элементов по центру */
-}
-
-
-.justify-content-left {
-    justify-content: left;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.chat {
-    height: 100%;
-}
-
-.chat-body {
-    width: calc(100% - 535px);
-}
-
-.sidebar .small-sidebar {
-    background: rgba(0, 0, 0, .7);
-    width: 72px;
-    position: relative;
-}
-
-.sidebar .big-sidebar {
-    background: rgba(37, 39, 42, 1);
-    width: 262px;
-    position: relative;
-    padding: 35px 24px 0;
-    box-sizing: border-box;
-}
-
-
-
-
-/*точки быстрых реакций*/
-
-.circle {
-    width: 10px;
-    height: 10px;
-    background: red;
-    border-radius: 50%;
-}
-
-.circles-container {
-    margin: 10px 10px 20px
-}
-
-.circle.yellow {
-    background: yellow;
-}
-
-.circle.green {
-    background: green;
-}
-
-
-/*кнопки маленького сайдбара*/
-
-.icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    margin: 10px 15px 10px;
-    background: #FF4743;
-    position: relative;
-}
-
-.icon::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: grey;
-    transform: translate(-18px, -50%);
-    opacity: 0;
-}
-
-.icon:hover {
-    background: red;
-}
-
-.icon:hover::before {
-    opacity: 1;
-}
-
-.icon-logo.active {
-    background: blue;
-}
-
-.icon-logo.active::before {
-    opacity: 1;
-}
-
-
-
-
-
-
-.plus {
-    width: 40px;
-    height: 40px;
-    background: red;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 48px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.opacity-button {
-    background: #000;
-    opacity: 0.4;
-}
-
-.opacity-button:hover {
-    opacity: 1;
-}
-
-
-/*точка возле активной иконки*/
-
-.little-circle {
-    width: 8px;
-    height: 8px;
-    background: gray;
-    border-radius: 50%;
-}
-
-
-/* .circle-container {
+        }
+        
+        .justify-content-center {
+            justify-content: center;
+            /* Выравнивание элементов по центру */
+        }
+        
+        .justify-content-left {
+            justify-content: left;
+        }
+        
+        .align-items-center {
+            align-items: center;
+        }
+        
+        .chat {
+            height: 100%;
+        }
+        
+        .chat-body {
+            width: calc(100% - 535px);
+        }
+        
+        .sidebar .small-sidebar {
+            background: rgba(0, 0, 0, .7);
+            width: 72px;
+            position: relative;
+        }
+        
+        .sidebar .big-sidebar {
+            background: rgba(37, 39, 42, 1);
+            width: 262px;
+            position: relative;
+            padding: 35px 24px 0;
+            box-sizing: border-box;
+        }
+        /*точки быстрых реакций*/
+        
+        .circle {
+            width: 10px;
+            height: 10px;
+            background: red;
+            border-radius: 50%;
+        }
+        
+        .circles-container {
+            margin: 10px 10px 20px
+        }
+        
+        .circle.yellow {
+            background: yellow;
+        }
+        
+        .circle.green {
+            background: green;
+        }
+        /*кнопки маленького сайдбара*/
+        
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            margin: 10px 15px 10px;
+            background: #FF4743;
+            position: relative;
+        }
+        
+        .icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: grey;
+            transform: translate(-18px, -50%);
+            opacity: 0;
+        }
+        
+        .icon:hover {
+            background: red;
+        }
+        
+        .icon:hover::before {
+            opacity: 1;
+        }
+        
+        .icon-logo.active {
+            background: blue;
+        }
+        
+        .icon-logo.active::before {
+            opacity: 1;
+        }
+        
+        .plus {
+            width: 40px;
+            height: 40px;
+            background: red;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 48px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .opacity-button {
+            background: #000;
+            opacity: 0.4;
+        }
+        
+        .opacity-button:hover {
+            opacity: 1;
+        } 
+        .little-circle {
+            width: 8px;
+            height: 8px;
+            background: gray;
+            border-radius: 50%;
+        }
+        /* .circle-container {
     margin: -395px 15px 10px -4px;
     background: gray;
     
 } */
+        /*Большой сайдбар*/
+        
+        .nomad-list {
+            font-family: 'Lato';
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        
+        .block-text {
+            font-family: 'Lato';
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            color: #B5B5B5;
+            margin-bottom: 32px;
+        }
+        
+        .title {
+            font-family: 'Lato';
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 14px;
+            color: #919191;
+            margin-bottom: 14px;
+        }
+        
+        .user-profile {
+            width: 201px;
+            height: 100%;
+            background: grey;
+        }
+        
+        .user-profile .img-container {
+            width: 100%;
+            max-height: 350px;
+            overflow: hidden;
+        }
+        
+        .user-profile .img-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .user {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .user::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: grey;
+        }
+        
+        .user.user-online::before {
+            background: green;
+        }
+        
+        .user img {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            overflow: hidden;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .name {
+            font-family: 'Lato';
+            font-size: 14px;
+            line-height: 16px;
+            color: #b5b5b5;
+        }
+        
+        .chevron {
+            top: 100%;
+            transform: translateY(35%);
+            margin-left: 5px;
+        }
+        
+        .settings {
+            top: 100%;
+            transform: translateY(35%);
+            margin-left: auto;
+        }
+        
+        .masage {
+            margin-right: 18px;
+        }
+        /*Большой сайдбар*/
+        
+        .black-text {
+            color: black;
+        }
+        
+        .general {
+            margin-top: 35px;
+            margin-left: 23px;
+        }
+        
+        .top-container {
+            width: 100%;
+            height: 79px;
+            margin: 0
+        }
+        
+        .person {
+            margin-top: 40px;
+            margin-right: 6px;
+        }
+        
+        .top-text {
+            font-family: Lato;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            color: #A4A4A4;
+            margin-top: 39px;
+            margin-right: 24px;
+        }
+        /**/
+        
+        form {
+            position: relative;
+            width: 241px;
+            height: 33;
+            margin-top: 30px;
+            margin-right: 23px;
+        }
+        
+        button[type="submit"] {
+            border: none;
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            top: 9px;
+            right: 14px;
+            cursor: pointer;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            height: 33px;
+            padding-left: 16px;
+            border: 1px solid #A4A4A4;
+        }
+        
+        input,
+        button {
+            outline: none;
+            background: transparent;
+        }
+        
+        .bell {
+            width: 14px;
+            height: 15px;
+            margin-top: 40px;
+            margin-right: 22px;
+            position: relative;
+        }
+        
+        .bell::after {
+            content: '';
+            left: 0;
+            top: 0%;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(253, 73, 72, 1);
+            position: absolute;
+            transform: translate(250%, -50%)
+        }
+        
+        .bell.new::after {
+            background: rgba(253, 73, 72, 1);
+        }
+        
+        .menu {
+            margin-top: 40px;
+            margin-right: 23px;
+        }
+        
+        .line {
+            width: 100%;
+            height: 1px;
+            background: rgba(0, 0, 0, 1);
+            margin-top: 0px;
+            opacity: 0.24;
+        }
+        .user-avatar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            overflow: hidden;
+            object-fit: cover;
+            margin-top: 19px;
+            margin-left: 24px;
+        }
+        
+        .user-name {
+            font-family: Lato;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 14px;
+            color: rgba(0, 0, 0, 1);
+            margin-right: 8px;
+        }
+        
+        .user-information {
+            margin-top: 19px;
+        }
+        
+        .time {
+            font-family: Lato;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            color: rgba(141, 141, 141, 1);
+        }
+        
+        .massege-case {
+            margin-left: 15px;
+        }
 
+        .day {
+            margin-top: 20px;
+        }
 
-/*Большой сайдбар*/
+     .day-line {
+         margin-top: 0px;
+         margin-left: 23px;
+         width: calc(100% - 46px);
+         height: 1px;
+         background: rgba(0, 0, 0, 1);
+         opacity: 0.24;
+     }
 
-.nomad-list {
-    font-family: 'Lato';
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #fff;
-    margin-bottom: 30px;
-}
+     .date {
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        color: rgba(141, 141, 141, 1);
+        background: white;
+        margin-top: 0%;
+        transform: translateY(-50%);
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        padding: 0 14;
+     }
 
-
-
-.block-text {
-    font-family: 'Lato';
-    font-size: 14px;
+.user-text {
+    font-family: Lato;
+    font-size: 13px;
     font-weight: 400;
-    line-height: 17px;
-    color: #B5B5B5;
-    margin-bottom: 32px;
+    line-height: 20px;
+    margin-right: 25px;
 }
 
-.title {
-    font-family: 'Lato';
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14px;
-    color: #919191;
-    margin-bottom: 14px;
-}
 
-.user-profile {
-    width: 201px;
-    height: 100%;
-    background: grey;
-}
-
-.user-profile .img-container {
-    width: 100%;
-    max-height: 350px;
-    overflow: hidden;
-}
-
-.user-profile .img-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.user {
+.person-photo {
+    margin-top: 9px;
+    margin-left: 80px;
     position: relative;
-    padding-left: 20px;
-    margin-bottom: 15px;
+    width: fit-content;
 }
 
-.user::before {
-    content: '';
+button.like {
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: grey;
+    color: black;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(20%, 20%);
+    padding: 5px 10px;
+    box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 14%);
 }
 
-.user.user-online::before {
-    background: green;
+.message-block {
+    margin-bottom: 0;
+    width: 100%;
+    height: 72px;
 }
 
-.user img {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
-    overflow: hidden;
-    object-fit: cover;
-    margin-right: 15px;
+.bottom {
+    background: white;
+    height: 72px;
+    width: 100%;
+    bottom: 0px;
+    position: sticky;
 }
 
-.name {
-    font-family: 'Lato';
-    font-size: 14px;
-    line-height: 16px;
-    color: #b5b5b5;
-}
-
-.chevron {
-    top: 100%;
-    transform: translateY(35%);
-    margin-left: 5px;
+.file {
+    margin-left: 22px;
+    margin-top: 25px;
     }
 
-.settings {
-    top: 100%;
-    transform: translateY(35%);
-    margin-left: auto ;
+.voice {
+    margin-left: 18px;
+    margin-top: 25px;
+    }
+
+.smile {
+    margin-right: 24px;
+    margin-top: 25px;
 }
 
-.masage {
-    margin-right: 18px;
-}
-
-
-/*Большой сайдбар*/
-.black-text {
-    color: black;
-}
-
-.general {
-    margin-top: 35px;
-    margin-left: 23px;
-}
-
-.top-container {
+input.message-text {
     width: 100%;
-    height: 79px;
-    margin: 0
+    height: 25px;
+    padding-left: 16px;
+    border: none;
+    margin-top: 25px;  
 }
 
-
+.padding-bottom {
+    background: white;
+    height: 72px;
+    width: 100%;
+    bottom: 0px;
+}
