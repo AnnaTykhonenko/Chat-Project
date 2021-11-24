@@ -1,11 +1,27 @@
-     document.addEventListener('click', function () {
-         let activeButton = document.getElementById('btn1')
-         activeButton.classList.add('active')
+let buttonsIcon = document.querySelectorAll('.icon')
+
+for (let buttonIcon of buttonsIcon) {
+    buttonIcon.addEventListener('click', () => {
+        clearActiveClasses()
+
+        buttonIcon.classList.add('active')
     })
+}
+
+function clearActiveClasses() {
+    buttonsIcon.forEach((buttonIcon) => {
+        buttonIcon.classList.remove('active')
+    })
+}
 
 
+const btn = document.querySelector('.like');
 
-     /* document.querySelector('button.like').onclick = function(){
-        console.log(this)  // теперь this это кнопка
-        this.style.background = "red";
-      }*/
+let like = true,
+    newСlick = document.querySelector('.likes').innerHTML;
+
+btn.addEventListener('click', () => {
+    newСlick = like ? ++newСlick : --newСlick;
+    like = !like;
+    document.querySelector('.likes').innerHTML = newСlick;
+});

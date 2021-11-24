@@ -4,25 +4,25 @@
             overflow: hidden;
             height: 100vh;
         }
-
+        
         button {
             border: none;
             cursor: pointer;
         }
-
+        
         .d-flex {
             display: flex;
         }
-
+        
         .flex-column {
             display: flex;
             flex-direction: column;
         }
-
+        
         ul {
             padding: 0;
         }
-
+        
         li {
             list-style: none;
             font-family: 'Lato';
@@ -33,53 +33,52 @@
             border-radius: 6px;
             margin-bottom: 5px;
         }
-
+        
         .color-blue {
             color: blue;
         }
-
+        
         li:hover {
             background: rgba(255, 255, 255, .2);
             color: white;
         }
-
         /*пространство между ивокруг элементов*/
-
+        
         .justify-content-between {
             justify-content: space-between;
             /* Равномерно распределяет все элементы по ширине flex-блока.
     Первый элемент вначале, последний в конце */
         }
-
+        
         .justify-content-around {
             justify-content: space-around;
             /* Равномерно распределяет все элементы по ширине flex-блока.
     Все элементы имеют полноразмерное пространство с обоих концов */
         }
-
+        
         .justify-content-center {
             justify-content: center;
             /* Выравнивание элементов по центру */
         }
-
+        
         .justify-content-left {
             justify-content: left;
         }
-
+        
         .align-items-center {
             align-items: center;
         }
-
+        
         .chat {
             height: calc(100vh - 73px - 79px);
             border-top: 1px solid rgba(0, 0, 0, .24);
             overflow-y: auto;
         }
-
+        
         .chat-body {
             width: calc(100% - 535px);
         }
-
+        
         .sidebar .small-sidebar {
             background: rgba(0, 0, 0, .7);
             width: 72px;
@@ -89,7 +88,7 @@
             flex-direction: column;
             justify-content: space-between;
         }
-
+        
         .sidebar .big-sidebar {
             background: rgba(37, 39, 42, 1);
             width: 262px;
@@ -98,30 +97,28 @@
             box-sizing: border-box;
             overflow-y: auto;
         }
-
         /*точки быстрых реакций*/
-
+        
         .circle {
             width: 10px;
             height: 10px;
             background: red;
             border-radius: 50%;
         }
-
+        
         .circles-container {
             margin: 10px 10px 20px
         }
-
+        
         .circle.yellow {
             background: yellow;
         }
-
+        
         .circle.green {
             background: green;
         }
-
         /*кнопки маленького сайдбара*/
-
+        
         .icon {
             width: 40px;
             height: 40px;
@@ -130,7 +127,7 @@
             background: #FF4743;
             position: relative;
         }
-
+        
         .icon::before {
             content: '';
             position: absolute;
@@ -143,23 +140,23 @@
             transform: translate(-18px, -50%);
             opacity: 0;
         }
-
+        
         .icon:hover {
             background: red;
         }
-
+        
         .icon:hover::before {
             opacity: 1;
         }
-
+        
         .icon.active {
-            background: blue;
+            background: rgb(0, 255, 42);
         }
-
+        
         .icon.active::before {
             opacity: 1;
         }
-
+        
         .plus {
             width: 40px;
             height: 40px;
@@ -168,30 +165,29 @@
             font-size: 48px;
             margin: 0 auto 20px;
         }
-
+        
         .opacity-button {
             background: #000;
             opacity: 0.4;
         }
-
+        
         .opacity-button:hover {
             opacity: 1;
         }
-
+        
         .little-circle {
             width: 8px;
             height: 8px;
             background: gray;
             border-radius: 50%;
         }
-
         /* .circle-container {
     margin: -395px 15px 10px -4px;
     background: gray;
     
 } */
         /*Большой сайдбар*/
-
+        
         .nomad-list {
             font-family: 'Lato';
             font-size: 20px;
@@ -200,7 +196,7 @@
             color: #fff;
             margin-bottom: 30px;
         }
-
+        
         .block-text {
             font-family: 'Lato';
             font-size: 14px;
@@ -209,7 +205,7 @@
             color: #B5B5B5;
             margin-bottom: 32px;
         }
-
+        
         .title {
             font-family: 'Lato';
             font-size: 12px;
@@ -218,32 +214,32 @@
             color: #919191;
             margin-bottom: 14px;
         }
-
+        
         .user-profile {
             width: 201px;
             height: 100vh;
             background: rgba(208, 211, 215, 1);
             ;
         }
-
+        
         .user-profile .img-container {
             width: 100%;
             max-height: 350px;
             overflow: hidden;
         }
-
+        
         .user-profile .img-container img {
             width: 100%;
             height: auto;
             object-fit: cover;
         }
-
+        
         .user {
             position: relative;
             padding-left: 20px;
             margin-bottom: 15px;
         }
-
+        
         .user::before {
             content: '';
             position: absolute;
@@ -255,11 +251,11 @@
             border-radius: 50%;
             background: grey;
         }
-
+        
         .user.user-online::before {
             background: green;
         }
-
+        
         .user img {
             width: 40px;
             height: 40px;
@@ -268,52 +264,51 @@
             object-fit: cover;
             margin-right: 15px;
         }
-
+        
         .name {
             font-family: 'Lato';
             font-size: 14px;
             line-height: 16px;
             color: #b5b5b5;
         }
-
+        
         .chevron {
             top: 100%;
             transform: translateY(35%);
             margin-left: 5px;
         }
-
+        
         .settings {
             top: 100%;
             transform: translateY(35%);
             margin-left: auto;
         }
-
+        
         .masage {
             margin-right: 18px;
         }
-
         /*Большой сайдбар*/
-
+        
         .black-text {
             color: black;
         }
-
+        
         .general {
             margin-top: 35px;
             margin-left: 23px;
         }
-
+        
         .top-container {
             width: 100%;
             height: 79px;
             margin: 0
         }
-
+        
         .person {
             margin-top: 40px;
             margin-right: 6px;
         }
-
+        
         .top-text {
             font-family: Lato;
             font-size: 14px;
@@ -323,9 +318,8 @@
             margin-top: 39px;
             margin-right: 24px;
         }
-
         /**/
-
+        
         form {
             position: relative;
             width: 241px;
@@ -333,7 +327,7 @@
             margin-top: 30px;
             margin-right: 23px;
         }
-
+        
         button[type="submit"] {
             border: none;
             height: 15px;
@@ -343,7 +337,7 @@
             right: 14px;
             cursor: pointer;
         }
-
+        
         input[type="text"] {
             width: 100%;
             height: 33px;
@@ -351,13 +345,13 @@
             border: 1px solid #A4A4A4;
             padding-right: 30px;
         }
-
+        
         input,
         button {
             outline: none;
             background: transparent;
         }
-
+        
         .bell {
             width: 14px;
             height: 15px;
@@ -365,7 +359,7 @@
             margin-right: 22px;
             position: relative;
         }
-
+        
         .bell::after {
             content: '';
             left: 0;
@@ -377,16 +371,15 @@
             position: absolute;
             transform: translate(250%, -50%)
         }
-
+        
         .bell.new::after {
             background: rgba(253, 73, 72, 1);
         }
-
+        
         .menu {
             margin-top: 40px;
             margin-right: 23px;
         }
-
         /* .line {
             width: 100%;
             height: 1px;
@@ -394,6 +387,7 @@
             margin-top: 0px;
             opacity: 0.24;
         } */
+        
         .user-avatar img {
             width: 40px;
             height: 40px;
@@ -403,7 +397,7 @@
             margin-top: 19px;
             margin-left: 24px;
         }
-
+        
         .user-name {
             font-family: Lato;
             font-size: 12px;
@@ -412,11 +406,11 @@
             color: rgba(0, 0, 0, 1);
             margin-right: 8px;
         }
-
+        
         .user-information {
             margin-top: 19px;
         }
-
+        
         .time {
             font-family: Lato;
             font-size: 12px;
@@ -424,15 +418,15 @@
             line-height: 14px;
             color: rgba(141, 141, 141, 1);
         }
-
+        
         .massege-case {
             margin-left: 15px;
         }
-
+        
         .day {
             margin-top: 20px;
         }
-
+        
         .day-line {
             margin-top: 0px;
             margin-left: 23px;
@@ -441,7 +435,7 @@
             background: rgba(0, 0, 0, 1);
             opacity: 0.24;
         }
-
+        
         .date {
             font-family: Lato;
             font-size: 13px;
@@ -456,7 +450,7 @@
             width: fit-content;
             padding: 0 14;
         }
-
+        
         .user-text {
             font-family: Lato;
             font-size: 13px;
@@ -464,15 +458,14 @@
             line-height: 20px;
             margin-right: 25px;
         }
-
-
+        
         .person-photo {
             margin-top: 9px;
             margin-left: 80px;
             position: relative;
             width: fit-content;
         }
-
+        
         button.like {
             position: absolute;
             color: black;
@@ -484,13 +477,13 @@
             padding: 5px 10px;
             box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 14%);
         }
-
+        
         .message-block {
             margin-bottom: 0;
             width: 100%;
             height: 72px;
         }
-
+        
         .bottom {
             position: relative;
             background: white;
@@ -499,22 +492,22 @@
             bottom: 0px;
             border-top: 1px solid rgba(0, 0, 0, .24);
         }
-
+        
         .file {
             margin-left: 22px;
             margin-top: 25px;
         }
-
+        
         .voice {
             margin-left: 18px;
             margin-top: 25px;
         }
-
+        
         .smile {
             margin-right: 24px;
             margin-top: 25px;
         }
-
+        
         input.message-text {
             width: 100%;
             height: 25px;
@@ -522,14 +515,14 @@
             border: none;
             margin-top: 25px;
         }
-
+        
         .padding-bottom {
             background: white;
             height: 72px;
             width: 100%;
             bottom: 0px;
         }
-
+        
         .user-name-profil {
             font-family: Lato;
             font-size: 16px;
@@ -540,9 +533,8 @@
             margin-bottom: 3px;
             margin-top: 20px;
             margin-left: 20px;
-
         }
-
+        
         .user-name-profil::after {
             content: '';
             position: absolute;
@@ -554,81 +546,78 @@
             border-radius: 50%;
             background: grey;
         }
-
+        
         .user-name-profil.user-name-profil-online::after {
             background: green;
         }
-
-       .user-information-profil {
-        font-family: Lato;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-        color: rgba(95, 97, 100, 1);
-        margin-left: 20px;
-        margin-bottom: 3px;
-               }
-     
-     
-    .user-text-profil {
-        font-family: Lato;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 17px;
-        margin-left: 20px;
-        margin-bottom: 11px;
-
-    }
-
-    .social {
-        max-width: 22px;
-        max-height: 22px;
-        width: 22px;
-        height: 22px;
-        background: rgba(232, 232, 235, 1);
-        border-radius: 50%;
-        margin-right: 6px;
-        box-sizing: border-box;  
-        flex: none;      
-    }
-
-    .social-container {
-        margin-top: 19px;
-        margin-left: 19px;
-        margin-bottom: 19px;
-    }
-
-    .social-img {
-        padding: 5px;
-    }
-
-    .message-button {
-        color: white;
-        background: rgba(53, 119, 239, 1);
-        height: 25px;
-        width: 134px;
-        margin-bottom: 14px;
-        margin-left: 20px;
-        border-radius: 5px;
-        font-family: Lato;
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 16px;
-    }
-
-    .small-button {
-        background: rgba(53, 119, 239, 1);
-        height: 25px;
-        width: 25px;
-        margin-left: 3px;
-        border-radius: 5px;
-    }
-
-
-    .chevron-profile {
-        justify-content: right;
-        margin: 0 auto 20px;
-        bottom: 0px;
-        position: absolute;
-        right: 24px;
-    }
+        
+        .user-information-profil {
+            font-family: Lato;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            color: rgba(95, 97, 100, 1);
+            margin-left: 20px;
+            margin-bottom: 3px;
+        }
+        
+        .user-text-profil {
+            font-family: Lato;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            margin-left: 20px;
+            margin-bottom: 11px;
+        }
+        
+        .social {
+            max-width: 22px;
+            max-height: 22px;
+            width: 22px;
+            height: 22px;
+            background: rgba(232, 232, 235, 1);
+            border-radius: 50%;
+            margin-right: 6px;
+            box-sizing: border-box;
+            flex: none;
+        }
+        
+        .social-container {
+            margin-top: 19px;
+            margin-left: 19px;
+            margin-bottom: 19px;
+        }
+        
+        .social-img {
+            padding: 5px;
+        }
+        
+        .message-button {
+            color: white;
+            background: rgba(53, 119, 239, 1);
+            height: 25px;
+            width: 134px;
+            margin-bottom: 14px;
+            margin-left: 20px;
+            border-radius: 5px;
+            font-family: Lato;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 16px;
+        }
+        
+        .small-button {
+            background: rgba(53, 119, 239, 1);
+            height: 25px;
+            width: 25px;
+            margin-left: 3px;
+            border-radius: 5px;
+        }
+        
+        .chevron-profile {
+            justify-content: right;
+            margin: 0 auto 20px;
+            bottom: 0px;
+            position: absolute;
+            right: 24px;
+        }
