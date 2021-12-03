@@ -728,11 +728,12 @@ body {
         }
         .chevron-profile {
             justify-content: right;
-            margin: 0 auto 20px;
             bottom: 0px;
             position: absolute;
             right: 24px;
             transition: all 0.5s;
+            margin-bottom: 20px;
+            right: 11px;
         }
 
        
@@ -740,6 +741,7 @@ body {
         .chevron-profile.active {
             transform:   rotate(180deg);
             transition: all 0.5s;
+            right: 24px;
         }
 
         .dribble {
