@@ -1,10 +1,19 @@
-        body {
+:root {
+    --color-black: #000;
+}
+
+
+body {
             margin: 0;
             font-family: 'Lato', sans-serif;
             overflow: hidden;
             height: 100vh;
         }
         
+        ::-webkit-scrollbar {
+            width: 0;
+          }
+
         button {
             border: none;
             cursor: pointer;
@@ -23,7 +32,7 @@
             padding: 0;
         }
         
-        li {
+        li.a {
             list-style: none;
             font-family: 'Lato';
             font-size: 14px;
@@ -34,11 +43,13 @@
             margin-bottom: 5px;
         }
         
-        .color-blue {
-            color: blue;
-        }
         
-        li:hover {
+        li.a:hover {
+            background: rgba(255, 255, 255, .2);
+            color: white;
+        }
+
+        li.a.active {
             background: rgba(255, 255, 255, .2);
             color: white;
         }
@@ -75,12 +86,19 @@
             overflow-y: auto;
         }
         
-        .chat-body {
+        .user-profile.activ .chat-body {
             width: calc(100% - 535px);
         }
+
+        .user-profile .chat-body {
+            width: calc(100% - 686px);
+        }
+
+        
+
         
         .sidebar .small-sidebar {
-            background: rgba(0, 0, 0, .7);
+            background: rgba(0, 0, 0, 0.85);
             width: 72px;
             position: relative;
             height: 100vh;
@@ -90,12 +108,13 @@
         }
         
         .sidebar .big-sidebar {
-            background: rgba(37, 39, 42, 1);
+            background: rgba(0, 0, 0, .7);
             width: 262px;
             position: relative;
             padding: 35px 24px 0;
             box-sizing: border-box;
             overflow-y: auto;
+            max-height: 100vh;
         }
         /*точки быстрых реакций*/
         
@@ -126,6 +145,7 @@
             margin: 10px 15px 10px;
             background: #FF4743;
             position: relative;
+            opacity: 0.5;
         }
         
         .icon::before {
@@ -142,7 +162,8 @@
         }
         
         .icon:hover {
-            background: red;
+            background: #FF4743;
+            opacity: 1;
         }
         
         .icon:hover::before {
@@ -150,7 +171,7 @@
         }
         
         .icon.active {
-            background: rgb(0, 255, 42);
+            opacity: 1;
         }
         
         .icon.active::before {
@@ -167,7 +188,7 @@
         }
         
         .opacity-button {
-            background: #000;
+            background: var(--color-black);
             opacity: 0.4;
         }
         
@@ -196,6 +217,7 @@
             color: #fff;
             margin-bottom: 30px;
         }
+
         
         .block-text {
             font-family: 'Lato';
@@ -213,25 +235,6 @@
             line-height: 14px;
             color: #919191;
             margin-bottom: 14px;
-        }
-        
-        .user-profile {
-            width: 201px;
-            height: 100vh;
-            background: rgba(208, 211, 215, 1);
-            ;
-        }
-        
-        .user-profile .img-container {
-            width: 100%;
-            max-height: 350px;
-            overflow: hidden;
-        }
-        
-        .user-profile .img-container img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
         }
         
         .user {
@@ -290,7 +293,7 @@
         /*Большой сайдбар*/
         
         .black-text {
-            color: black;
+            color: var(--color-black);
         }
         
         .general {
@@ -302,6 +305,10 @@
             width: 100%;
             height: 79px;
             margin: 0
+        }
+
+        .right-elements {
+            width: 120px;
         }
         
         .person {
@@ -326,6 +333,7 @@
             height: 33;
             margin-top: 30px;
             margin-right: 23px;
+            
         }
         
         button[type="submit"] {
@@ -344,8 +352,13 @@
             padding-left: 16px;
             border: 1px solid #A4A4A4;
             padding-right: 30px;
-        }
+            border-radius: 5px;
+         }
         
+         input::placeholder{
+            opacity: 0.4;
+        }
+
         input,
         button {
             outline: none;
@@ -448,7 +461,7 @@
             margin-left: auto;
             margin-right: auto;
             width: fit-content;
-            padding: 0 14;
+            padding: 0 14px;
         }
         
         .user-text {
@@ -457,7 +470,26 @@
             font-weight: 400;
             line-height: 20px;
             margin-right: 25px;
+            /* opacity: 0;
+            animation: show-text 1s .2s linear forwards; */
         }
+
+        /* @keyframes show-text {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            80% {
+                transform: translateY(0%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        } */
         
         .person-photo {
             margin-top: 9px;
@@ -476,6 +508,17 @@
             transform: translate(20%, 20%);
             padding: 5px 10px;
             box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 14%);
+        }
+
+
+        .like:active { 
+            box-shadow: inset 1px 1px 5px rgba(154, 147, 140, 0.5), 0px 2px 8px 0px rgb(0 0 0 / 14%);
+
+        }
+
+        .likes {
+            margin: 1px 3px;
+
         }
         
         .message-block {
@@ -523,19 +566,19 @@
             bottom: 0px;
         }
         
-        .user-name-profil {
+        .user-name-profile {
             font-family: Lato;
             font-size: 16px;
             font-weight: 700;
             line-height: 19px;
-            color: #000;
+            color: var(--color-black);
             position: relative;
             margin-bottom: 3px;
             margin-top: 20px;
             margin-left: 20px;
         }
         
-        .user-name-profil::after {
+        .user-name-profile::after {
             content: '';
             position: absolute;
             left: 0;
@@ -547,7 +590,7 @@
             background: grey;
         }
         
-        .user-name-profil.user-name-profil-online::after {
+        .user-name-profile.user-name-profile-online::after {
             background: green;
         }
         
@@ -612,12 +655,93 @@
             width: 25px;
             margin-left: 3px;
             border-radius: 5px;
+            margin-right: 20px;
         }
         
+        .user-profile.active {
+            width: 201px;
+            height: 100vh;
+            background: rgba(208, 211, 215, 1);
+            position: relative;
+        }
+        
+        .user-profile {
+            width: 50px;
+            background: rgba(208, 211, 215, 1);
+            transition: ease-in 0.7s;
+        }
+        
+    
+
+        .user-profile {
+            transition: ease-in-out 1.4s;
+        }
+
+        .user-profile.active {
+            display: block;
+        }
+
+        .user-profile .active-profile {
+            opacity: 0;
+            transition: ease-in-out 0.5s;
+            pointer-events: none;
+        }
+
+        .user-profile.active .active-profile {
+            opacity: 1;
+            transition-delay: 1s;
+            pointer-events: all;
+        }
+
+
+        
+        
+        .img-container {
+            width: 40px;
+            border-radius: 50px;
+            overflow: hidden;
+            margin: 5px auto;
+            transition: ease-in 0.8s;
+        }
+
+        .user-profile.active .img-container {
+            width: 100%;
+            max-height: 350px;
+            border-radius: 50px;
+            overflow: hidden;
+            border-radius: 0px;
+            margin: auto
+        }
+                
+        
+        .user-profile .img-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .user-profile .img-container .active-profile img {
+            width: 100%;
+            height: auto;
+            border-radius: 50px;
+            object-fit: cover;
+        }
         .chevron-profile {
             justify-content: right;
             margin: 0 auto 20px;
             bottom: 0px;
             position: absolute;
             right: 24px;
+            transition: all 0.5s;
+        }
+
+       
+
+        .chevron-profile.active {
+            transform:   rotate(180deg);
+            transition: all 0.5s;
+        }
+
+        .dribble {
+            margin-bottom: 1px
         }

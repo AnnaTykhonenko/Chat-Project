@@ -15,6 +15,33 @@ function clearActiveClasses() {
 }
 
 
+let li = document.querySelectorAll('.a')
+
+for (let liActiv of li) {
+    liActiv.addEventListener('click', () => {
+        clearli()
+
+        liActiv.classList.add('active')
+    })
+}
+
+function clearli() {
+    li.forEach((liActiv) => {
+        liActiv.classList.remove('active')
+    })
+}
+
+
+
+const chevron = document.getElementsByClassName('chevron-profile')[0];
+const userProfile = document.getElementsByClassName('user-profile')[0];
+console.log(chevron);
+chevron.addEventListener('click', function () {
+    chevron.classList.toggle('active');
+    userProfile.classList.toggle('active');
+})
+
+
 const btn = document.querySelector('.like');
 
 let like = true,
@@ -25,3 +52,5 @@ btn.addEventListener('click', () => {
     like = !like;
     document.querySelector('.likes').innerHTML = newСlick;
 });
+
+
